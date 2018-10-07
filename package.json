@@ -1,17 +1,16 @@
 {
-  "name": "impressora-sweda",
+  "name": "api-impressora-sweda",
   "version": "1.0.0",
   "description": "apis para enviar comandos esc/pos a impressora.",
   "main": "app.js",
   "scripts": {
     "start:dev": "nodemon --inspect app.js",
     "worker:dev": "nodemon --inspect=9230 app.js",
-    "test": "./node_modules/.bin/mocha --reporter spec",
-    "test:unit": "DISABLE_DATABASE_TESTING=true jest"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/damiana/impressora-sweda.git"
+    "url": "git+https://github.com/damiana/api-impressora-sweda.git"
   },
   "keywords": [
     "sweda",
@@ -22,9 +21,9 @@
   "author": "Damiana Costa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/damiana/impressora-sweda/issues"
+    "url": "https://github.com/damiana/api-impressora-sweda/issues"
   },
-  "homepage": "https://github.com/damiana/impressora-sweda#readme",
+  "homepage": "https://github.com/damiana/api-impressora-sweda#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
