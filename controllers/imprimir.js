@@ -1,9 +1,9 @@
-const { responseJson } = require('../utils/controllers');
+const { responseJson, responseErrorJson} = require('../utils/controllers');
 
 const servicosImpressora = require('../services/imprimir')
 
 function getTexto(req, res) {
-  return servicosImpressora.imprimirTexto()
+  return servicosImpressora.imprimirTexto(req)
     .then(texto => responseJson(res, {
       mensagem: texto
     }))
@@ -19,7 +19,7 @@ function getImagem(req, res) {
 function getStatus(req, res) {
   return servicosImpressora.mostrarStatus()
   .then(status => responseJson(res, {
-    mensagem: status
+    status: status
   }))
   .catch((err) => responseErrorJson(res, 'servicosImpressora:mostrarStatus', err));
 }

@@ -7,7 +7,16 @@ Modo de utilização:
 - npm run start:dev
 
 
-urls:
+urls expostas:
 
 - http://localhost:3000/v1/imprimirTexto
 - http://localhost:3000/v1/status
+
+
+Test:
+- npm test
+
+urls para gravar e mostrar o texto salvo usando uma api externa:
+
+- http://localhost:3050/v1/gravarTexto
+- http://localhost:3050/v1/mostarTextoGravado

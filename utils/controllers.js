@@ -1,6 +1,7 @@
+const fs = require('fs');
+
 'use strict';
 const HttpStatus = require('http-status-codes');
-//const logger = require('./logger');
 
 function responseJson(res, data, code = HttpStatus.OK) {
   res.status(code);
@@ -9,13 +10,20 @@ function responseJson(res, data, code = HttpStatus.OK) {
 
 function responseErrorJson(res, methodName, error, code = HttpStatus.INTERNAL_SERVER_ERROR) {
   res.status(error.httpCode || code);
-  // logger.error(methodName, error);
   return res.json({
     error: error.message || error.toString()
   });
 }
 
+function gravarTextoImpresso(texto) {
+  let stream = fs.createWriteStream(new Date().toISOString()+".txt");
+  stream.once('open', function(fd) {
+    stream.write(texto);
+    stream.end();
+  });
+}
 module.exports = exports = {
   responseJson,
-  responseErrorJson
+  responseErrorJson,
+  gravarTextoImpresso
 };
