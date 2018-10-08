@@ -1,0 +1,13 @@
+- Informações:
+
+- Não consegui fazer a conexão da impressora, por esse este motivo comentei o envio do buffer quando envia os comandos.
+- funcionalidades implementadas:
+    - init;
+    - impressão;
+    - corte de papel (completo);
+    - criada api externa para salvar o texto impresso;
+    - criado arquivo .txt para salvar o texto impresso (uma forma de backup local);
+
+- Não fez muito sentido para mim implementar metodos para enviar comandos como negrito, espaçamento, altura e largura de fontes e etc sem ter a impressora para testar o modo real.
+- a documentação é extensa e complicada de entende-la sem conseguir testar os comandos.
+
